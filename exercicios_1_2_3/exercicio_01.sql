@@ -8,7 +8,7 @@ CREATE TABLE colaboradores(
     sobrenome varchar(255) not null,
     cargo varchar(255) not null,
     departamento varchar(255) not null,
-    salario decimal not null,
+    salario decimal(6,2) not null,
     PRIMARY KEY (id)
     );
 
@@ -28,6 +28,8 @@ SELECT * FROM colaboradores;
 SELECT * FROM colaboradores WHERE salario > 2000;
 
 SELECT * FROM colaboradores WHERE salario < 2000;
+
+ALTER TABLE colaboradores MODIFY salario decimal(6,2);
 
 UPDATE colaboradores SET nome = 'Heimy' WHERE id = 3;
 UPDATE colaboradores SET sobrenome = 'Dias' WHERE id = 3;
